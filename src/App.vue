@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <HeaderPage />
+ <el-main style="padding: 10px;">
+  <div style="display: flex; justify-content: flex-end ">
+    <el-button type="primary" @click="$router.push('/')">Home</el-button>
+      <el-button type="primary" @click="$router.push('/about')">About</el-button>
+  </div>
+<router-view />
+ </el-main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderPage from './components/Header.vue'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+ name: 'App',
+ components: { HeaderPage}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
